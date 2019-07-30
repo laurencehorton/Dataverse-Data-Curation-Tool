@@ -9,6 +9,7 @@ registerLocaleData(localeFrCa, 'fr-CA');
 
 import {
   MatButtonModule,
+  MatPaginatorIntl,
   MatTableModule,
   MatSortModule,
   MatTabsModule,
@@ -41,7 +42,7 @@ import { VarComponent } from './var/var.component';
 import { VarDialogComponent } from './var-dialog/var-dialog.component';
 import { VarStatDialogComponent } from './var-stat-dialog/var-stat-dialog.component';
 import { ChartComponent } from './chart/chart.component';
-
+import { CustomPaginator } from './CustomPaginator';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,10 @@ import { ChartComponent } from './chart/chart.component';
   exports: [
   ],
   entryComponents: [VarDialogComponent, VarStatDialogComponent],
-  providers: [DdiService],
+  providers: [
+    DdiService,
+    { provide: MatPaginatorIntl, useValue: CustomPaginator() }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
