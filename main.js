@@ -140,7 +140,7 @@ function createTranslateLoader(http) {
     return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](http);
 }
 function HttpLoaderFactory(httpClient) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](httpClient);
+    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](httpClient, './assets/i18n/', '.json');
 }
 function createMyMatPaginatorIntl(translateService, translateParser) { return new _mat_paginator_intl__WEBPACK_IMPORTED_MODULE_19__["MyMatPaginatorIntl"](translateService, translateParser); }
 var AppModule = /** @class */ (function () {
